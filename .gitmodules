@@ -1,0 +1,9 @@
+[submodule "Component"]
+	path = Component
+	url = ssh://git@github.com/CodeEditorLand/FoundationLandComponent.git
+[submodule "Cargo"]
+	path = Cargo
+	url = ssh://git@github.com/CodeEditorLand/FoundationLandCargo.git
+[submodule "NPM"]
+	path = NPM
+	url = ssh://git@github.com/CodeEditorLand/FoundationLandNPM.git
