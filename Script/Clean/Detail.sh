@@ -2,7 +2,7 @@
 
 \echo "Process: Clean/Detail.sh"
 
-# Context: CodeEditorLand/Property/Land/Foundation
+# Context: CodeEditorLand/Foundation/Land/Component
 
 Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 

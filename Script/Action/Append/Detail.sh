@@ -2,22 +2,22 @@
 
 \echo "Process: Action/Append/Detail.sh"
 
-# Context: CodeEditorLand/Property/Land/Foundation
+# Context: CodeEditorLand/Foundation/Land/Component
 
 \pwd
 
-# TODO: Add dynamic { "repository": { "directory": Property/$PROPERTY/Foundation/$REPOSITORY } }
-# The path is always CodeEditorLand/Property/Land/Foundation/$SUBMODULE.name
+# TODO: Add dynamic { "repository": { "directory": Foundation/$Foundation/Component/$Component } }
+# The path is always CodeEditorLand/Foundation/Land/Component/$SUBMODULE.name
 # or fetch the correct submodule URL
 
 \jq -S ". * {
-	\"homepage\": \"https://github.com/CodeEditorLand/Property#readme\",
+	\"homepage\": \"https://github.com/CodeEditorLand/Foundation#readme\",
 	\"bugs\": {
-		\"url\": \"https://github.com/CodeEditorLand/Property/issues\"
+		\"url\": \"https://github.com/CodeEditorLand/Foundation/issues\"
 	},
 	\"repository\": {
 		\"type\": \"git\",
-		\"url\": \"git+https://github.com/CodeEditorLand/Property.git\"
+		\"url\": \"git+https://github.com/CodeEditorLand/Foundation.git\"
 	},
 	\"version\": \"0.0.1\",
 	\"license\": \"SEE LICENSE IN LICENSE\",
