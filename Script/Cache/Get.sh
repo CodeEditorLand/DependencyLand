@@ -30,6 +30,7 @@ Omit=(
 	"CodeEditorLand/FoundationLandCargoDocument"
 	"CodeEditorLand/FoundationLandCargoMaintain"
 	"CodeEditorLand/FoundationLandCargoRuntime"
+	"CodeEditorLand/FoundationLandComponent"
 	"CodeEditorLand/FoundationLandNPM"
 	"CodeEditorLand/FoundationLandNPMCommon"
 	"CodeEditorLand/FoundationLandNPMIngress"
