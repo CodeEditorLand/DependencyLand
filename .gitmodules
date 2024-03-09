@@ -1,7 +1,3 @@
-[submodule "Service"]
-path = Service
-url = ssh://git@github.com/CodeEditorLand/FoundationLandService.git
-
 [submodule "Cargo"]
 path = Cargo
 url = ssh://git@github.com/CodeEditorLand/FoundationLandCargo.git
