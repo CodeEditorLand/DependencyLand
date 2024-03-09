@@ -222,5 +222,5 @@ for Organization in "${Organization[@]}"; do
 
 	\mapfile -t Repository < <(\printf "%s\n" "${Repository[@]}" | \sort)
 
-	\printf '%s\n' "${Repository[@]}" | jq -R . | jq -s . >"$Directory"/Land/Service.json
+	\printf '%s\n' "${Repository[@]}" | jq -R . | jq -s . >"$Directory"/../Service/Land.json
 done
