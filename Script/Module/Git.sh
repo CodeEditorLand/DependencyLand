@@ -4,14 +4,21 @@
 
 # Context: CodeEditorLand/Foundation/$Foundation/Service
 
-Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
-\readarray -t Repository <"$Directory"/../Cache/Repository/CodeEditorLand
+if [ $# -gt 0 ]; then
+	if [ -f "$1" ]; then
+		\mapfile -t Service < <(jq -r '.[]' "$1" | \tr -d '\r')
+	else
+		\echo "Error: Service file not found: $1"
+		\exit 1
+	fi
+fi
 
-\rm -rf "$Directory"/../../Foundation/.gitmodules
+\rm -rf "$Current"/../../Foundation/.gitmodules
 
-for Repository in "${Repository[@]}"; do
-	Folder="${Repository/'CodeEditorLand/'/}"
+for Service in "${Service[@]}"; do
+	Folder="${Service/'CodeEditorLand/'/}"
 
 	\cd "$Folder" || \exit
 
@@ -19,7 +26,7 @@ for Repository in "${Repository[@]}"; do
 
 	\gh repo set-default "$(\git remote get-url origin)"
 
-	Origin="ssh://git@github.com/${Repository}.git"
+	Origin="ssh://git@github.com/${Service}.git"
 
 	\echo "Folder: "
 	\echo "$Folder"
@@ -34,7 +41,7 @@ for Repository in "${Repository[@]}"; do
 
 	EOM
 
-	\echo "$Submodule" >>"$Directory"/../../Foundation/.gitmodules
+	\echo "$Submodule" >>"$Current"/../../Foundation/.gitmodules
 
 	\cd - || \exit
 done
