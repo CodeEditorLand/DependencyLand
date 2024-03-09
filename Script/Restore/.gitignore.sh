@@ -2,7 +2,7 @@
 
 \echo "Process: Restore/.gitignore.sh"
 
-# Context: CodeEditorLand/Foundation/Land/Component
+# Context: CodeEditorLand/Foundation/Land/Service
 
 Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 

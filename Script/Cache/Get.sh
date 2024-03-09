@@ -34,10 +34,12 @@ Omit=(
 	"CodeEditorLand/FoundationLandNPM"
 	"CodeEditorLand/FoundationLandNPMCommon"
 	"CodeEditorLand/FoundationLandNPMIngress"
+	"CodeEditorLand/FoundationLandService"
 	"CodeEditorLand/FoundationTauri"
 	"CodeEditorLand/FoundationTauriCargo"
 	"CodeEditorLand/FoundationTauriComponent"
 	"CodeEditorLand/FoundationTauriNPM"
+	"CodeEditorLand/FoundationTauriService"
 	"CodeEditorLand/JavaScript"
 	"CodeEditorLand/Land"
 	"CodeEditorLand/LLRT"
@@ -220,7 +222,5 @@ for Organization in "${Organization[@]}"; do
 
 	\mapfile -t Repository < <(\printf "%s\n" "${Repository[@]}" | \sort)
 
-	\printf '%s\n' "${Repository[@]}" | jq -R . | jq -s . >"$Directory"/Land/Component.json
-
-	# \printf "%s\n" "${Repository[@]}" >"$Directory"/Land/Component.json
+	\printf '%s\n' "${Repository[@]}" | jq -R . | jq -s . >"$Directory"/Land/Service.json
 done
