@@ -8,4 +8,4 @@ url = ssh://git@github.com/CodeEditorLand/DependencyLandNPM.git
 
 [submodule "Service"]
 path = Service
-url = ssh://git@github.com/CodeEditorLand/DependencyLandService.git
+url = ssh://git@github.com/CodeEditorLand/DependencyLandDependency.git
